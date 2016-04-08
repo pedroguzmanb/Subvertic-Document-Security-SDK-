@@ -1,0 +1,57 @@
+==============================================================================
+	FILTER SUPPORT SPECIFICATION
+	BY Pedro Guzmán (pedro@subvertic.com)
+	2016
+==============================================================================
+
+# -------------------------------------------------------------------------- #
+# Adobe Compliant Filter                                                     #
+# -------------------------------------------------------------------------- #
+/adbe.pkcs7.detached
+
+# -------------------------------------------------------------------------- #
+# European Union Standard Compliant Filter									 #
+# -------------------------------------------------------------------------- #
+
+/ETSI.CAdES.detached
+/ETSI.RFC3161 (With X509 PKI Timestamp Protocol)
+
+In this case, /ByteRange shall cover the entire file, including de signature 
+dictionary, but excluding de /Contents value. For this reason, this library
+will always take the complete byte range of the PDF document regardless of 
+the sub filter choosen.
+
+
+==============================================================================
+DIGITAL SIGNATURE COMPOSITION 
+==============================================================================
+
+%PDF-1.x
+...
+/ByteRange ...
+/Contents <
+	DIGITAL SIGNATURE
+	- Certificate
+	- Signed Message Digest
+	- Timestamp
+>...
+%%EOF
+
+==============================================================================
+SUPPORTED SIGNATURES ALGORITHMS IN THIS LIBRARY
+==============================================================================
+- RSA: 4096 bits since (PDF 1.7) (Less that 2048 keys is not recommended)
+------------------------------------------------------------------------------
+- DSA (Digital Signature Algorithm) - FIPS Standard for digital signatures
+	4094 bits since (PDF 1.6)
+------------------------------------------------------------------------------
+- ECDSA (Elliptic Curve Digital Signature Algorithm) -PKCS#13
+
+==============================================================================
+SUPPORTED MESSAGE DIGEST ALGORITHMS IN THIS LIBRARY
+==============================================================================
+- SHA1 (This algorithm is supported but it is no longer recommended)
+- SHA256
+- SHA384
+- SHA512
+- RIPEMD160

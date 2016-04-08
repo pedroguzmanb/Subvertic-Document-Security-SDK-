@@ -1,0 +1,99 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Subvertic.DocumentSecurity", "Subvertic.DocumentSecurity\Subvertic.DocumentSecurity.csproj", "{2EBC62BD-EAA9-4575-862B-1D57CB6921B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Subvertic.DocumentSecurity.XAdES", "Subvertic.DocumentSecurity.XAdES\Subvertic.DocumentSecurity.XAdES.csproj", "{81FA912B-8AB2-4F73-BCFB-46697AEFA450}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Subvertic.DocumentSecurity.PAdES", "Subvertic.DocumentSecurity.PAdES\Subvertic.DocumentSecurity.PAdES.csproj", "{C56FC808-56E4-4E17-8599-B92C1AA209BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Subvertic.DocumentSecurity.Crypto", "Subvertic.DocumentSecurity.Crypto\Subvertic.DocumentSecurity.Crypto.csproj", "{047329AA-4A83-4F66-868D-EF0276DC6B69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Subvertic.DocumentSecurity.PKI", "Subvertic.DocumentSecurity.PKI\Subvertic.DocumentSecurity.PKI.csproj", "{5F3DDBB4-5A0E-408A-B9CA-85E00309471A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{C447BF12-1560-4C38-8583-873CB9BD20B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Subvertic.DocumentSecurity.Examples.Console", "Subvertic.DocumentSecurity.Examples.Console\Subvertic.DocumentSecurity.Examples.Console.csproj", "{33AA98E4-3B41-425C-9938-E94EED93BCE3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{360FA4D9-1469-480F-B6B0-62F871C02C53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Subvertic.DocumentSecurity.Tests", "Subvertic.DocumentSecurity.Tests\Subvertic.DocumentSecurity.Tests.csproj", "{81526256-A2B1-44A7-A638-3DCBEA43D37E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Subvertic.DocumentSecurity.Crypto.Tests", "Subvertic.DocumentSecurity.Crypto.Tests\Subvertic.DocumentSecurity.Crypto.Tests.csproj", "{566264CF-3C4A-4CE1-91AE-6DF89EF9D539}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Subvertic.DocumentSecurity.PAdES.Tests", "Subvertic.DocumentSecurity.PAdES.Tests\Subvertic.DocumentSecurity.PAdES.Tests.csproj", "{0E501194-5DC8-4EB4-84F5-A45260BC0E6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Subvertic.DocumentSecurity.PKI.Tests", "Subvertic.DocumentSecurity.PKI.Tests\Subvertic.DocumentSecurity.PKI.Tests.csproj", "{04D0461B-061F-41D5-8432-2AA516D861A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Subvertic.DocumentSecurity.XAdES.Tests", "Subvertic.DocumentSecurity.XAdES.Tests\Subvertic.DocumentSecurity.XAdES.Tests.csproj", "{37EA95D9-9EC4-42C5-AF9B-BDD80C90842A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FB43D9E5-29E2-4929-B6A6-BCCC2E988A4F}"
+	ProjectSection(SolutionItems) = preProject
+		PDFSupportedFilters.txt = PDFSupportedFilters.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2EBC62BD-EAA9-4575-862B-1D57CB6921B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EBC62BD-EAA9-4575-862B-1D57CB6921B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EBC62BD-EAA9-4575-862B-1D57CB6921B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EBC62BD-EAA9-4575-862B-1D57CB6921B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81FA912B-8AB2-4F73-BCFB-46697AEFA450}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81FA912B-8AB2-4F73-BCFB-46697AEFA450}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81FA912B-8AB2-4F73-BCFB-46697AEFA450}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81FA912B-8AB2-4F73-BCFB-46697AEFA450}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C56FC808-56E4-4E17-8599-B92C1AA209BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C56FC808-56E4-4E17-8599-B92C1AA209BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C56FC808-56E4-4E17-8599-B92C1AA209BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C56FC808-56E4-4E17-8599-B92C1AA209BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{047329AA-4A83-4F66-868D-EF0276DC6B69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{047329AA-4A83-4F66-868D-EF0276DC6B69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{047329AA-4A83-4F66-868D-EF0276DC6B69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{047329AA-4A83-4F66-868D-EF0276DC6B69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F3DDBB4-5A0E-408A-B9CA-85E00309471A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F3DDBB4-5A0E-408A-B9CA-85E00309471A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F3DDBB4-5A0E-408A-B9CA-85E00309471A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F3DDBB4-5A0E-408A-B9CA-85E00309471A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33AA98E4-3B41-425C-9938-E94EED93BCE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33AA98E4-3B41-425C-9938-E94EED93BCE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33AA98E4-3B41-425C-9938-E94EED93BCE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33AA98E4-3B41-425C-9938-E94EED93BCE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81526256-A2B1-44A7-A638-3DCBEA43D37E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81526256-A2B1-44A7-A638-3DCBEA43D37E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81526256-A2B1-44A7-A638-3DCBEA43D37E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81526256-A2B1-44A7-A638-3DCBEA43D37E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{566264CF-3C4A-4CE1-91AE-6DF89EF9D539}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{566264CF-3C4A-4CE1-91AE-6DF89EF9D539}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{566264CF-3C4A-4CE1-91AE-6DF89EF9D539}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{566264CF-3C4A-4CE1-91AE-6DF89EF9D539}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E501194-5DC8-4EB4-84F5-A45260BC0E6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E501194-5DC8-4EB4-84F5-A45260BC0E6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E501194-5DC8-4EB4-84F5-A45260BC0E6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E501194-5DC8-4EB4-84F5-A45260BC0E6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04D0461B-061F-41D5-8432-2AA516D861A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04D0461B-061F-41D5-8432-2AA516D861A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04D0461B-061F-41D5-8432-2AA516D861A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04D0461B-061F-41D5-8432-2AA516D861A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37EA95D9-9EC4-42C5-AF9B-BDD80C90842A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37EA95D9-9EC4-42C5-AF9B-BDD80C90842A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37EA95D9-9EC4-42C5-AF9B-BDD80C90842A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37EA95D9-9EC4-42C5-AF9B-BDD80C90842A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{33AA98E4-3B41-425C-9938-E94EED93BCE3} = {C447BF12-1560-4C38-8583-873CB9BD20B5}
+		{81526256-A2B1-44A7-A638-3DCBEA43D37E} = {360FA4D9-1469-480F-B6B0-62F871C02C53}
+		{566264CF-3C4A-4CE1-91AE-6DF89EF9D539} = {360FA4D9-1469-480F-B6B0-62F871C02C53}
+		{0E501194-5DC8-4EB4-84F5-A45260BC0E6D} = {360FA4D9-1469-480F-B6B0-62F871C02C53}
+		{04D0461B-061F-41D5-8432-2AA516D861A7} = {360FA4D9-1469-480F-B6B0-62F871C02C53}
+		{37EA95D9-9EC4-42C5-AF9B-BDD80C90842A} = {360FA4D9-1469-480F-B6B0-62F871C02C53}
+	EndGlobalSection
+EndGlobal
