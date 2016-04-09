@@ -9,7 +9,7 @@ namespace Subvertic.DocumentSecurity.Crypto.MessageDigests
 {
     /// <summary>
     ///     <description>Defines a common interface for message</description>
-    ///     <author>Pedro Guzmán</author>
+    ///     <author>Pedro Guzmán (pedro@subvertic.com)</author>
     /// </summary>
     public interface ISdiMessageDigestGenerator
     {
@@ -40,7 +40,7 @@ namespace Subvertic.DocumentSecurity.Crypto.MessageDigests
         // METHOD COMPUTE                                                                                                            //
         // ------------------------------------------------------------------------------------------------------------------------- //
         /// <summary>
-        /// 
+        ///     
         /// </summary>
         /// <param name="plainData"></param>
         /// <param name="algorithm"></param>
@@ -52,7 +52,7 @@ namespace Subvertic.DocumentSecurity.Crypto.MessageDigests
         // METHOD COMPUTE                                                                                                            //
         // ------------------------------------------------------------------------------------------------------------------------- //
         /// <summary>
-        /// 
+        ///     Computes the corresponding hash value of a given string with the specified algorithm
         /// </summary>
         /// <param name="plainData"></param>
         /// <param name="algorithm"></param>
@@ -63,7 +63,7 @@ namespace Subvertic.DocumentSecurity.Crypto.MessageDigests
         // METHOD COMPUTE                                                                                                            //
         // ------------------------------------------------------------------------------------------------------------------------- //
         /// <summary>
-        /// 
+        ///     Computes the corresponding hash value of a given string with provided salt-bytes
         /// </summary>
         /// <param name="plainData"></param>
         /// <param name="algorithm"></param>

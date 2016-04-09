@@ -44,8 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="CertificateSelectorFactory.cs" />
+    <Compile Include="ICertificateSelector.cs" />
+    <Compile Include="ISigner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignerFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Subvertic.DocumentSecurity
 {
-    public class Class1
+    public class CertificateSelectorFactory
     {
     }
 }
