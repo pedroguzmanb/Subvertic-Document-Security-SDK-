@@ -11,7 +11,7 @@ namespace Subvertic.DocumentSecurity.Crypto.MessageDigests
     ///     <description>Defines a common interface for message</description>
     ///     <author>Pedro Guzmán (pedro@subvertic.com)</author>
     /// </summary>
-    public interface ISdiMessageDigestGenerator
+    public interface ISdsMessageDigestGenerator
     {
 
 

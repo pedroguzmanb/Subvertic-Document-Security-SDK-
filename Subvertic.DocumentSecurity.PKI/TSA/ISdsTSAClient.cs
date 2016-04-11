@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Subvertic.DocumentSecurity.PKI.CRL
+namespace Subvertic.DocumentSecurity.PKI.TSA
 {
-    public interface ISdsCrlClient
+    class ISdsTSAClient
     {
-
     }
 }

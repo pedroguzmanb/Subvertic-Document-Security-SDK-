@@ -30,8 +30,8 @@ namespace Subvertic.DocumentSecurity.Examples.Console
             RSACryptoServiceProvider csp = null;
 
             X509Certificate2Collection collection = (X509Certificate2Collection)personalX509Store.Certificates;
-            X509Certificate2Collection fcollection = (X509Certificate2Collection)collection.Find(X509FindType.FindByTimeValid, DateTime.Now, true);
-            X509Certificate2Collection scollection = X509Certificate2UI.SelectFromCollection(fcollection, "Test Certificate Select", "Select a certificate from the following list to get information on that certificate", X509SelectionFlag.MultiSelection);
+            //X509Certificate2Collection fcollection = (X509Certificate2Collection)collection.Find(X509FindType.FindByTimeValid, DateTime.Now, false);
+            X509Certificate2Collection scollection = X509Certificate2UI.SelectFromCollection(collection, "Test Certificate Select", "Select a certificate from the following list to get information on that certificate", X509SelectionFlag.MultiSelection);
             System.Console.WriteLine("Number of certificates: {0}{1}", scollection.Count, Environment.NewLine);
             byte[] myCert = null;
 
