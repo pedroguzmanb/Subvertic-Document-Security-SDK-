@@ -7,6 +7,13 @@ using System.Threading.Tasks;
 
 namespace Subvertic.DocumentSecurity.PKI.UI
 {
+    // ------------------------------------------------------------------------------------------------------------------------------------ //
+    // CLASS SDS DEFAULT CERTIFICATE SELECTOR                                                                                               //
+    // ------------------------------------------------------------------------------------------------------------------------------------ //
+    /// <summary>
+    /// 
+    ///     <author>Pedro Guzmán (pedro@subvertic.com)</author>
+    /// </summary>
     public class SdsDefaultCertificateSelector : ISdsCertificateSelector
     {
         private X509Certificate2Collection localCollection;

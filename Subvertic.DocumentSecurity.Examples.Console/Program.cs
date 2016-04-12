@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
+using Subvertic.DocumentSecurity.PKI.StoreManager;
 
 namespace Subvertic.DocumentSecurity.Examples.Console
 {
@@ -25,42 +26,36 @@ namespace Subvertic.DocumentSecurity.Examples.Console
         static void Main(string[] args)
         {
 
-            X509Store personalX509Store = new X509Store(StoreName.My, StoreLocation.CurrentUser);
-            personalX509Store.Open(OpenFlags.ReadOnly | OpenFlags.OpenExistingOnly);
-            RSACryptoServiceProvider csp = null;
 
-            X509Certificate2Collection collection = (X509Certificate2Collection)personalX509Store.Certificates;
-            //X509Certificate2Collection fcollection = (X509Certificate2Collection)collection.Find(X509FindType.FindByTimeValid, DateTime.Now, false);
-            X509Certificate2Collection scollection = X509Certificate2UI.SelectFromCollection(collection, "Test Certificate Select", "Select a certificate from the following list to get information on that certificate", X509SelectionFlag.MultiSelection);
-            System.Console.WriteLine("Number of certificates: {0}{1}", scollection.Count, Environment.NewLine);
-            byte[] myCert = null;
-
-            foreach (X509Certificate2 x509 in scollection)
+            var sm = new X509StoreManager();
+            if (sm.Open(StoreName.My, StoreLocation.CurrentUser))
             {
-                try
-                {
-                    byte[] rawdata = x509.RawData;
-                    System.Console.WriteLine("Content Type: {0}{1}", X509Certificate2.GetCertContentType(rawdata), Environment.NewLine);
-                    System.Console.WriteLine("Friendly Name: {0}{1}", x509.FriendlyName, Environment.NewLine);
-                    System.Console.WriteLine("Certificate Verified?: {0}{1}", x509.Verify(), Environment.NewLine);
-                    System.Console.WriteLine("Simple Name: {0}{1}", x509.GetNameInfo(X509NameType.SimpleName, true), Environment.NewLine);
-                    System.Console.WriteLine("Signature Algorithm: {0}{1}", x509.SignatureAlgorithm.FriendlyName, Environment.NewLine);
-                    System.Console.WriteLine("Private Key: {0}{1}", x509.PrivateKey.ToXmlString(false), Environment.NewLine);
-                    System.Console.WriteLine("Public Key: {0}{1}", x509.PublicKey.Key.ToXmlString(false), Environment.NewLine);
-                    System.Console.WriteLine("Certificate Archived?: {0}{1}", x509.Archived, Environment.NewLine);
-                    System.Console.WriteLine("Length of Raw Data: {0}{1}", x509.RawData.Length, Environment.NewLine);
-                    X509Certificate2UI.DisplayCertificate(x509);
-                    x509.Reset();
-                    myCert = x509.RawData;
-                }
-                catch (CryptographicException)
-                {
-                    System.Console.WriteLine("Information could not be written out for this certificate.");
-                }
-            }
-            personalX509Store.Close();
 
-            System.Console.WriteLine("Digest: " + ComputeDigest(Encoding.UTF8.GetBytes("Hash test this this this")));
+                var cert = sm.SelectCertificateWithUi(X509FindType.FindByTimeValid, DateTime.Now,
+                    "Seleccionar Certificado", "Selecciones el certificado digital que desea utilizar");
+                if (cert != null)
+                {
+                    System.Console.WriteLine("Friendly Name: " + cert.FriendlyName);
+                    System.Console.WriteLine("Has Private Key: " + cert.HasPrivateKey);
+                    System.Console.WriteLine("Issuer Name: " + cert.IssuerName.Name);
+                    System.Console.WriteLine("Serial Number: " + cert.SerialNumber);
+                    System.Console.WriteLine("Subject: " + cert.SubjectName.Name);
+                    System.Console.WriteLine("Signature Algorithm: " + cert.SignatureAlgorithm.FriendlyName);
+                    System.Console.WriteLine("Base64 Encoded Certificate: " +
+                                             Convert.ToBase64String(cert.GetRawCertData()));
+
+                } // IF ENDS
+                else
+                {
+                    System.Console.WriteLine("No certificates found matching find criteria");
+                }
+            } // IF ENDS
+            else
+            {
+                System.Console.WriteLine("Unable to open certificate store");
+            }
+
+
 
             System.Console.ReadLine();
 

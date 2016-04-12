@@ -55,6 +55,31 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Migration.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Subvertic.DocumentSecurity.Crypto\Subvertic.DocumentSecurity.Crypto.csproj">
+      <Project>{047329aa-4a83-4f66-868d-ef0276dc6b69}</Project>
+      <Name>Subvertic.DocumentSecurity.Crypto</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Subvertic.DocumentSecurity.PAdES\Subvertic.DocumentSecurity.PAdES.csproj">
+      <Project>{c56fc808-56e4-4e17-8599-b92c1aa209ba}</Project>
+      <Name>Subvertic.DocumentSecurity.PAdES</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Subvertic.DocumentSecurity.PKI\Subvertic.DocumentSecurity.PKI.csproj">
+      <Project>{5f3ddbb4-5a0e-408a-b9ca-85e00309471a}</Project>
+      <Name>Subvertic.DocumentSecurity.PKI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Subvertic.DocumentSecurity.XAdES\Subvertic.DocumentSecurity.XAdES.csproj">
+      <Project>{81fa912b-8ab2-4f73-bcfb-46697aefa450}</Project>
+      <Name>Subvertic.DocumentSecurity.XAdES</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Subvertic.DocumentSecurity\Subvertic.DocumentSecurity.csproj">
+      <Project>{2ebc62bd-eaa9-4575-862b-1d57cb6921b1}</Project>
+      <Name>Subvertic.DocumentSecurity</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

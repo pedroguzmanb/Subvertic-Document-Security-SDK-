@@ -29,6 +29,18 @@ namespace Subvertic.DocumentSecurity.PKI.StoreManager
         private bool storeOpen;
         private X509Certificate2Collection currentSelection;
 
+        // -------------------------------------------------------------------------------------------------------------------------------- //
+        // CLASS DESTRUCTOR                                                                                                                 //
+        // -------------------------------------------------------------------------------------------------------------------------------- //
+        /// <summary>
+        ///     Releases resources used by this class 
+        /// </summary>
+        ~X509StoreManager()
+        {
+            Close();
+            GC.Collect();
+        } // DESTRUCTOR METHOD ENDS ------------------------------------------------------------------------------------------------------- //
+
 
         // -------------------------------------------------------------------------------------------------------------------------------- //
         // METHOD GET CURRENT SELECTION                                                                                                     //
@@ -104,7 +116,10 @@ namespace Subvertic.DocumentSecurity.PKI.StoreManager
         /// <returns></returns>
         public bool Open(StoreName name, StoreLocation location)
         {
+            
             var loadedSuccessfully = false;
+            // Make access to the certificate store thread-safe
+         
             try
             {
                 certificateStore = new X509Store(name, location);
@@ -116,7 +131,7 @@ namespace Subvertic.DocumentSecurity.PKI.StoreManager
             {
                 Trace.TraceError(ce.Message);
                 loadedSuccessfully = false;
-                throw new CryptographicException("Unable to access certificate store",ce);
+                throw new CryptographicException("Unable to access certificate store", ce);
             } // CATCH ENDS
             catch (SecurityException se)
             {
@@ -138,6 +153,28 @@ namespace Subvertic.DocumentSecurity.PKI.StoreManager
             } // CATCH ENDS
             return loadedSuccessfully;
         } // METHOD OPEN ENDS ------------------------------------------------------------------------------------------------------------- //
+
+        // -------------------------------------------------------------------------------------------------------------------------------- //
+        // METHOD CLOSE                                                                                                                     //
+        // -------------------------------------------------------------------------------------------------------------------------------- //
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Close()
+        {
+            try
+            {
+                lock (certificateStore)
+                {
+                    certificateStore.Close();
+                } // LOCK ENDS
+            } // TRY ENDS
+            catch (Exception e)
+            {
+                Trace.TraceError(e.Message);
+            } // CATCH ENDS
+        } // METHOD CLOSE ENDS ------------------------------------------------------------------------------------------------------------ //
+
 
     } // METHOD X509 STORE MANAGER ENDS --------------------------------------------------------------------------------------------------- //
 }
