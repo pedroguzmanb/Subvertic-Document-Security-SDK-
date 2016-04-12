@@ -34,6 +34,9 @@
       <HintPath>..\packages\BouncyCastle.1.7.0\lib\Net40-Client\BouncyCastle.Crypto.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\packages\iTextSharp.5.5.9\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Security" />
@@ -51,6 +54,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StoreManager\X509StoreManager.cs" />
     <Compile Include="TSA\ISdsTSAClient.cs" />
+    <Compile Include="TSA\SdsTsaPdfClient.cs" />
+    <Compile Include="TSA\TsaCredentials.cs" />
     <Compile Include="UI\ISdsCertificateSelector.cs" />
     <Compile Include="UI\SdsCertificateSelectorFactory.cs" />
     <Compile Include="UI\SdsDefaultCertificateSelector.cs" />
