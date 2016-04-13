@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entropy\RngRandomData.cs" />
     <Compile Include="MessageDigests\Impl\SdsMessageDigestDefaultGenerator.cs" />
     <Compile Include="MessageDigests\ISdsMessageDigestGenerator.cs" />
     <Compile Include="MessageDigests\SdsMessageDigestAlgorithm.cs" />
